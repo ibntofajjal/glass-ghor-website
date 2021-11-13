@@ -18,7 +18,7 @@ const Register = () => {
             <img src={registerIMG} className="img-fluid" alt="" />
           </div>
           <div className="col col-lg-6 col-12 input-fields">
-            <h2>Register Now: </h2> <br />
+            <h2 className="mt-3">Register Now: </h2> <br />
             <input
               type="text"
               name="name"
@@ -36,7 +36,11 @@ const Register = () => {
               placeholder="Your email here"
             />{" "}
             <br /> <br />
-            <input type="submit" value="Register" className="btn btn-primary" />
+            <input
+              type="submit"
+              value="Register"
+              className="btn btn-primary pb-5"
+            />
             <br />
             <Link to="/login" className="ms-2">
               <p className="underline"> Already User ? Login Now ▸</p>
