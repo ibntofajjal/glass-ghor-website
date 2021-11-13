@@ -59,9 +59,19 @@ const Navbar = () => {
                 <Link
                   className="nav-link active text-dark login btn btn-danger"
                   aria-current="page"
-                  to="/contact"
+                  to="/login"
                 >
                   Login
+                </Link>
+              </li>
+
+              <li className="nav-item">
+                <Link
+                  className="nav-link active text-dark login btn btn-danger"
+                  aria-current="page"
+                  to="/login"
+                >
+                  Register
                 </Link>
               </li>
             </ul>
