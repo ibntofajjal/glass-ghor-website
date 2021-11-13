@@ -4,6 +4,7 @@ import Glasses from "./Pages/Glasses/Glasses/Glasses";
 import Home from "./Pages/Home/Home/Home";
 import NotFound from "./Pages/Home/NotFound/NotFound";
 import Login from "./Pages/Login/Login/Login";
+import Register from "./Pages/Login/Login/Register/Register";
 
 function App() {
   return (
@@ -21,6 +22,9 @@ function App() {
           </Route>
           <Route path="/login">
             <Login></Login>
+          </Route>
+          <Route path="/register">
+            <Register></Register>
           </Route>
           <Route path="*">
             <NotFound></NotFound>

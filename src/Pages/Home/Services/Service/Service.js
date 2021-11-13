@@ -19,7 +19,7 @@ const Service = (props) => {
             Description: <b>{des}</b>
           </p>
         </div>
-        <Link to={`/booking/${_id}`}>
+        <Link to={`/register`}>
           <button>Buy Now</button>
         </Link>
       </div>

@@ -36,6 +36,7 @@ const Navbar = () => {
                   Home
                 </Link>
               </li>
+
               <li className="nav-item">
                 <Link
                   className="nav-link active text-dark"
@@ -43,15 +44,6 @@ const Navbar = () => {
                   to="/glasses"
                 >
                   Glasses
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link
-                  className="nav-link active text-dark"
-                  aria-current="page"
-                  to="/about"
-                >
-                  About Us
                 </Link>
               </li>
 
@@ -62,16 +54,6 @@ const Navbar = () => {
                   to="/login"
                 >
                   Login
-                </Link>
-              </li>
-
-              <li className="nav-item">
-                <Link
-                  className="nav-link active text-dark login btn btn-danger"
-                  aria-current="page"
-                  to="/login"
-                >
-                  Register
                 </Link>
               </li>
             </ul>

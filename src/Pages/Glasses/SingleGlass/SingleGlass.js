@@ -18,7 +18,7 @@ const SingleGlass = (props) => {
             Description: <b>{des}</b>
           </p>
         </div>
-        <Link to={`/booking/${_id}`}>
+        <Link to={`/register`}>
           <button>Book Now</button>
         </Link>
       </div>
