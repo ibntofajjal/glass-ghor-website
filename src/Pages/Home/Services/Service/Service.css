@@ -1,0 +1,39 @@
+.service-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+}
+.services-sec {
+  /* background-color: #f78e47; */
+  margin: 4rem 0;
+}
+.services-sec h1 {
+  text-transform: uppercase;
+  font-weight: bolder;
+  color: #f78e47;
+}
+.services-title {
+  text-align: center;
+
+  text-transform: uppercase;
+  background-color: #fec21b;
+  font-weight: bolder;
+  width: 67%;
+  border-radius: 5px;
+  display: block;
+  margin: 7rem auto;
+}
+.latestBanner {
+  background-image: url("../../../../img/Banner-Background/latest-glasses.png");
+  height: 50vh;
+  margin: 5rem 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+/* ======================== */
+@media only screen and (max-width: 688px) {
+  .service-section {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

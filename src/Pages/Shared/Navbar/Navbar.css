@@ -1,0 +1,42 @@
+.nav-item {
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 10px;
+}
+.nav-item a:hover {
+  background-color: #ffd82b;
+  color: black !important;
+  border-radius: 3px;
+  padding-left: 15px;
+}
+.nav-item a {
+  color: white !important;
+}
+
+.my-nav {
+  background-color: rgb(43, 43, 43);
+}
+.navs {
+  margin-left: auto;
+  margin-right: 80px;
+  color: white !important;
+}
+.btn-outline {
+  border: 2px solid rgb(128, 204, 179);
+  padding: 5px 25px;
+  border-radius: 25px;
+}
+.btn-outline:hover {
+  background-color: #9693ff;
+  padding: 6px 25px;
+  border-radius: 25px;
+  color: white;
+}
+.userImg {
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+/* Responsive Here */
+@media only screen and (max-width: 650px) {
+}

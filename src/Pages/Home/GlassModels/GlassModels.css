@@ -1,0 +1,29 @@
+.glasses-model {
+  align-items: center;
+}
+.model-right small {
+  font-size: 17px;
+  color: rgb(255, 230, 0);
+  background-color: #2b2b2b;
+  padding: 5px 15px;
+  border-radius: 2px;
+}
+.model-right h1 {
+  font-size: 60px;
+}
+.model-right p {
+  font-size: 20px;
+}
+
+/* Responsive Here */
+@media only screen and (max-width: 650px) {
+  .model-right {
+    margin-top: 3rem;
+  }
+  .model-right h1 {
+    font-size: 40px;
+  }
+  .model-right p {
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,62 @@
+.notfound-404 {
+  background-image: url("../../../img/Banner-Background/notfound.gif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.notfound-404 h1 {
+  font-size: 30rem;
+  font-weight: bolder;
+  color: rgb(255, 230, 0);
+  -webkit-text-stroke-width: 5px;
+  -webkit-text-stroke-color: rgb(255, 0, 0);
+  text-align: center;
+  font-family: monospace;
+}
+.notfound-404 p {
+  text-align: center;
+  font-size: 3rem;
+  background-color: rgb(255, 230, 0);
+  font-weight: bold;
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+.yellow-btn {
+  text-align: center;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  font-weight: bold;
+  margin-left: 45%;
+  padding: 10px 55px;
+  background-color: rgb(255, 230, 0);
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 5px;
+}
+
+/* Responsive Here */
+@media only screen and (max-width: 650px) {
+  .notfound-404 h1 {
+    font-size: 10rem;
+    padding-top: 45%;
+  }
+  .notfound-404 p {
+    display: none;
+  }
+  .yellow-btn {
+    text-align: center;
+    margin: 0 0;
+    margin-left: 25%;
+  }
+  .notfound-404 {
+    background-image: none;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+  }
+}

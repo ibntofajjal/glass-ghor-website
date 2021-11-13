@@ -1,0 +1,30 @@
+.footer {
+  background-color: #2b2b2b;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+}
+
+.footer-logo {
+  /* margin-top: 5rem; */
+  text-align: center;
+  padding-top: 20px;
+}
+
+.footer-links {
+  text-align: center;
+  margin-top: 1.5rem;
+  padding-bottom: 20px;
+  margin-left: 10px;
+}
+
+.footer-link {
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+}
+.footer-link:hover {
+  background-color: #ffd82b;
+  color: black;
+  border-radius: 5px;
+}
