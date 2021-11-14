@@ -2,8 +2,10 @@ import React from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 import Logo from "../../../img/logo.png";
+import useAuth from "../../../hooks/useAuth";
 
 const Navbar = () => {
+  const { user, logOut } = useAuth();
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-dark fixed-top my-nav d-block mb-5">
@@ -48,13 +50,23 @@ const Navbar = () => {
               </li>
 
               <li className="nav-item">
-                <Link
-                  className="nav-link active text-dark login btn btn-danger"
-                  aria-current="page"
-                  to="/login"
-                >
-                  Login
-                </Link>
+                {user?.email ? (
+                  <button
+                    className="nav-link active text-light login btn btn-danger"
+                    aria-current="page"
+                    onClick={logOut}
+                  >
+                    LogOut
+                  </button>
+                ) : (
+                  <Link
+                    className="nav-link active text-dark login btn btn-primary"
+                    aria-current="page"
+                    to="/login"
+                  >
+                    Login
+                  </Link>
+                )}
               </li>
             </ul>
           </div>
