@@ -43,7 +43,7 @@ const Buy = () => {
     };
 
     // Send to server
-    fetch(`http://localhost:5000/orders`, {
+    fetch(`https://salty-depths-67861.herokuapp.com/orders`, {
       method: "POST",
       headers: {
         "content-type": "application/json",
