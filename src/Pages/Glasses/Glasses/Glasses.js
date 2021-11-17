@@ -9,7 +9,7 @@ import SingleGlass from "../SingleGlass/SingleGlass";
 const Glasses = () => {
   const [glasses, setGlasses] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:5000/glassesCollection`)
+    fetch(`https://salty-depths-67861.herokuapp.com/glassesCollection`)
       .then((res) => res.json())
       .then((data) => setGlasses(data));
   }, []);
