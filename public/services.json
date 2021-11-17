@@ -2,73 +2,73 @@
   {
     "name": "Mandu, Sunglass",
     "img": "https://raw.githubusercontent.com/ibntofajjal/fake-images/main/glasses/glass1.png",
-    "cost": 700,
+    "price": 700,
     "des": "Adventure-ready Sunglass Hut-exclusive frames. Where sustainability meets performance."
   },
   {
     "name": "Eve Gold, Sunglass",
     "img": "https://raw.githubusercontent.com/ibntofajjal/fake-images/main/glasses/glass2.png",
-    "cost": 750,
+    "price": 750,
     "des": "Bold, confident and The original Biggie is back with a fresh take on a classic Versace"
   },
   {
     "name": "BaliS, Sunglass",
     "img": "https://raw.githubusercontent.com/ibntofajjal/fake-images/main/glasses/glass3.png",
-    "cost": 560,
+    "price": 560,
     "des": "Celebrate our 50th with the new Tiffany T eyewear, available only at Sunglass Hut."
   },
   {
     "name": "Gold-Gate, Sunglass",
     "img": "https://raw.githubusercontent.com/ibntofajjal/fake-images/main/glasses/glass4.png",
-    "cost": 486,
+    "price": 486,
     "des": "Bold, confident and The original Biggie is back with a fresh take on a classic Versace"
   },
   {
     "name": "Blueray, Sunglass",
     "img": "https://raw.githubusercontent.com/ibntofajjal/fake-images/main/glasses/glass5.png",
-    "cost": 595,
+    "price": 595,
     "des": "Adventure-ready Sunglass Hut-exclusive frames. Where sustainability meets performance."
   },
   {
     "name": "Dubain, Sunglass",
     "img": "https://raw.githubusercontent.com/ibntofajjal/fake-images/main/glasses/glass6.png",
-    "cost": 600,
+    "price": 600,
     "des": "Celebrate our 50th with the new Tiffany T eyewear, available only at Sunglass Hut."
   },
   {
     "name": "Cruls, Sunglass",
     "img": "https://raw.githubusercontent.com/ibntofajjal/fake-images/main/glasses/glass7.png",
-    "cost": 485,
+    "price": 485,
     "des": "Celebrate our 50th with the new Tiffany T eyewear, available only at Sunglass Hut."
   },
   {
     "name": "Manzdeer, Sunglass",
     "img": "https://raw.githubusercontent.com/ibntofajjal/fake-images/main/glasses/glass8.png",
-    "cost": 840,
+    "price": 840,
     "des": "Celebrate our 50th with the new Tiffany T eyewear, available only at Sunglass Hut."
   },
   {
     "name": "Norea, Sunglass",
     "img": "https://raw.githubusercontent.com/ibntofajjal/fake-images/main/glasses/glass9.png",
-    "cost": 955,
+    "price": 955,
     "des": "Celebrate our 50th with the new Tiffany T eyewear, available only at Sunglass Hut."
   },
   {
     "name": "Wasus, Sunglass",
     "img": "https://raw.githubusercontent.com/ibntofajjal/fake-images/main/glasses/glass10.png",
-    "cost": 220,
+    "price": 220,
     "des": "Celebrate our 50th with the new Tiffany T eyewear, available only at Sunglass Hut."
   },
   {
     "name": "BlackShade, Sunglass",
     "img": "https://raw.githubusercontent.com/ibntofajjal/fake-images/main/glasses/glass11.png",
-    "cost": 412,
+    "price": 412,
     "des": "Celebrate our 50th with the new Tiffany T eyewear, available only at Sunglass Hut."
   },
   {
     "name": "Gold, Sunglass",
     "img": "https://raw.githubusercontent.com/ibntofajjal/fake-images/main/glasses/glass12.png",
-    "cost": 983,
+    "price": 983,
     "des": "Celebrate our 50th with the new Tiffany T eyewear, available only at Sunglass Hut."
   }
 ]

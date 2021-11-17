@@ -10,16 +10,16 @@ const Service = (props) => {
         <img src={img} className="img-fluid" width="500" alt="" />
         <div className="spot-info">
           <p>
-            Spot: <b>{name}</b>
+            Name: <b>{name}</b>
           </p>
           <p>
-            Cost: <b> ${cost}</b>
+            Price: <b> ${cost}</b>
           </p>
           <p>
             Description: <b>{des}</b>
           </p>
         </div>
-        <Link to={`/register`}>
+        <Link to={`/buy/${_id}`}>
           <button>Buy Now</button>
         </Link>
       </div>
