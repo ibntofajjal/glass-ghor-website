@@ -49,6 +49,8 @@ const Navbar = () => {
                 </Link>
               </li>
 
+              <p className="text-warning px-3 usermail">{user?.email}</p>
+
               <li className="nav-item">
                 {user?.email ? (
                   <button

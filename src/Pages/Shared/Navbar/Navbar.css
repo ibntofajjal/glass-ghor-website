@@ -1,7 +1,17 @@
 .nav-item {
   font-size: 18px;
   font-weight: 500;
-  margin-left: 10px;
+  /* margin-left: 10px; */
+  margin-top: 10px;
+}
+.usermail {
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #ffd82b;
+  padding: 5.5px 10px;
+  font-weight: thin;
+  margin-left: 5px;
+  margin-top: 10px;
 }
 .nav-item a:hover {
   background-color: #ffd82b;

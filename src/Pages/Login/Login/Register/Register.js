@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Register.css";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useHistory } from "react-router-dom";
 import Footer from "../../../Shared/Footer/Footer";
 import registerIMG from "../../../../img/Banner-Background/register.png";
 import Navbar from "../../../Shared/Navbar/Navbar";
@@ -10,6 +10,9 @@ const Register = () => {
   // UseState For Change the Login State
   const [loginData, setLoginData] = useState({});
   const { user, authError, registerUser, isLoading } = useAuth();
+
+  const location = useLocation();
+  const history = useHistory();
 
   // Handle OnChange For Input Field
   const handleOnChange = (e) => {
@@ -27,7 +30,7 @@ const Register = () => {
       alert("Password Did not match");
       return;
     }
-    registerUser(loginData.email, loginData.password);
+    registerUser(loginData.email, loginData.password, location, history);
     e.preventDefault();
   };
   return (

@@ -6,7 +6,7 @@ import Service from "../Service/Service";
 const Services = () => {
   const [services, setServices] = useState([]);
   useEffect(() => {
-    fetch(`/shortServices.json`)
+    fetch(`http://localhost:5000/latestCollection`)
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, []);

@@ -9,7 +9,7 @@ import SingleGlass from "../SingleGlass/SingleGlass";
 const Glasses = () => {
   const [glasses, setGlasses] = useState([]);
   useEffect(() => {
-    fetch(`/services.json`)
+    fetch(`http://localhost:5000/glassesCollection`)
       .then((res) => res.json())
       .then((data) => setGlasses(data));
   }, []);
