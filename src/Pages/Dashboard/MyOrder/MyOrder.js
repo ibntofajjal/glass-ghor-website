@@ -173,7 +173,22 @@ function MyOrder(props) {
         }}
       >
         <Toolbar />
-        <h1 className="text-center mt-5">MyOrders</h1>
+
+        <div className="container my-3">
+          <h2 className="text-center">All of your orders: 0</h2>
+          <div className="table-responsive">
+            <table className="table">
+              <thead>
+                <tr>
+                  <th scope="col">Bike Name</th>
+                  <th scope="col">Delivery Date</th>
+                  <th scope="col">Status</th>
+                  <th scope="col">Action</th>
+                </tr>
+              </thead>
+            </table>
+          </div>
+        </div>
       </Box>
     </Box>
   );
