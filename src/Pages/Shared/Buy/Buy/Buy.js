@@ -59,7 +59,7 @@ const Buy = () => {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:5000/singleProduct/${glassID}`)
+    fetch(`https://salty-depths-67861.herokuapp.com/singleProduct/${glassID}`)
       .then((res) => res.json())
       .then((data) => setGlass(data));
   }, []);
