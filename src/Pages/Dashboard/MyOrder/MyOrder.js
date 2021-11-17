@@ -18,10 +18,12 @@ import Typography from "@mui/material/Typography";
 import dashboardLogo from "../../../img/logo.png";
 import { Link, NavLink } from "react-router-dom";
 import paymentIMG from "../../../img/Banner-Background/payment.png";
+import useAuth from "../../../hooks/useAuth";
 
 const drawerWidth = 240;
 
 function MyOrder(props) {
+  const { logOut } = useAuth();
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
@@ -89,6 +91,9 @@ function MyOrder(props) {
             Review
           </NavLink>
         </li>
+        <button onClick={logOut} className="btn-danger btn ms-3">
+          LogOut
+        </button>
       </List>
     </div>
   );

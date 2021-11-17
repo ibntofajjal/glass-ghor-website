@@ -22,7 +22,7 @@ import useAuth from "../../../hooks/useAuth";
 const drawerWidth = 240;
 
 function Dashboard(props) {
-  const { user } = useAuth();
+  const { user, logOut } = useAuth();
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
@@ -90,6 +90,9 @@ function Dashboard(props) {
             Review
           </NavLink>
         </li>
+        <button onClick={logOut} className="btn-danger btn ms-3">
+          LogOut
+        </button>
       </List>
     </div>
   );
