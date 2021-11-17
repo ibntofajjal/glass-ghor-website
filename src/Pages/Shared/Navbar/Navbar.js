@@ -51,6 +51,17 @@ const Navbar = () => {
 
               <p className="text-warning px-3 usermail">{user?.email}</p>
 
+              {user?.email && (
+                <li className="nav-item">
+                  <Link
+                    className="nav-link active text-dark btn-primary rounded mx-3"
+                    aria-current="page"
+                    to="/dashboard"
+                  >
+                    Dashboard
+                  </Link>
+                </li>
+              )}
               <li className="nav-item">
                 {user?.email ? (
                   <button

@@ -5,6 +5,7 @@ import {
   signOut,
   onAuthStateChanged,
   signInWithEmailAndPassword,
+  updateProfile,
 } from "firebase/auth";
 import { useEffect, useState } from "react";
 
@@ -18,11 +19,22 @@ const useFirebase = () => {
   const auth = getAuth();
 
   //  ▉▉▉▉ Register User ▉▉▉▉
-  const registerUser = (email, password) => {
+  const registerUser = (email, password, name, history) => {
     setIsLoading(true);
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         setAuthError("");
+        const newUser = { email, displayName: name };
+        setUser(newUser);
+
+        // Send name to firebase after creation
+        updateProfile(auth.currentUser, {
+          displayName: name,
+        })
+          .then(() => {})
+          .catch((error) => {});
+
+        history.replace("/");
       })
       .catch((error) => {
         setAuthError(error.message);

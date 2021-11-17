@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Register.css";
-import { Link, useLocation, useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import Footer from "../../../Shared/Footer/Footer";
 import registerIMG from "../../../../img/Banner-Background/register.png";
 import Navbar from "../../../Shared/Navbar/Navbar";
@@ -11,17 +11,16 @@ const Register = () => {
   const [loginData, setLoginData] = useState({});
   const { user, authError, registerUser, isLoading } = useAuth();
 
-  const location = useLocation();
   const history = useHistory();
 
-  // Handle OnChange For Input Field
-  const handleOnChange = (e) => {
+  // Handle onBlur For Input Field
+  const handleOnBlur = (e) => {
     const field = e.target.name;
     const value = e.target.value;
     const newLoginData = { ...loginData };
     newLoginData[field] = value;
+
     setLoginData(newLoginData);
-    console.log(newLoginData);
   };
 
   // Handle Submit button
@@ -30,7 +29,7 @@ const Register = () => {
       alert("Password Did not match");
       return;
     }
-    registerUser(loginData.email, loginData.password, location, history);
+    registerUser(loginData.email, loginData.password, loginData.name, history);
     e.preventDefault();
   };
   return (
@@ -52,28 +51,28 @@ const Register = () => {
                   type="text"
                   name="name"
                   placeholder="Your Name"
-                  onChange={handleOnChange}
+                  onBlur={handleOnBlur}
                 />
                 <br /> <br />
                 <input
                   type="email"
                   name="email"
                   placeholder="Your email"
-                  onChange={handleOnChange}
+                  onBlur={handleOnBlur}
                 />
                 <br /> <br />
                 <input
                   type="password"
                   name="password"
                   placeholder="New Password"
-                  onChange={handleOnChange}
+                  onBlur={handleOnBlur}
                 />
                 <br /> <br />
                 <input
                   type="password"
                   name="confirmPassword"
                   placeholder="Confirm Your Password"
-                  onChange={handleOnChange}
+                  onBlur={handleOnBlur}
                 />
                 <br /> <br />
                 <input
