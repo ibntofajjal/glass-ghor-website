@@ -17,12 +17,11 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import dashboardLogo from "../../../img/logo.png";
 import { Link, NavLink } from "react-router-dom";
-import useAuth from "../../../hooks/useAuth";
+import paymentIMG from "../../../img/Banner-Background/payment.png";
 
 const drawerWidth = 240;
 
-function Dashboard(props) {
-  const { user } = useAuth();
+function Review(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
@@ -169,42 +168,13 @@ function Dashboard(props) {
         }}
       >
         <Toolbar />
-        <h1 className="text-center mt-5">
-          Your Email is <br />{" "}
-          <span
-            style={{
-              backgroundColor: "purple",
-              color: "white",
-              fontSize: "20px",
-              padding: "15px 30px",
-              borderRadius: "5px",
-              marginTop: "3rem",
-            }}
-          >
-            {user.email}
-          </span>
-        </h1>
-        <h1 className="text-center mt-5">
-          Your Role is <br />{" "}
-          <span
-            style={{
-              backgroundColor: "brown",
-              color: "white",
-              fontSize: "20px",
-              padding: "15px 30px",
-              borderRadius: "5px",
-              marginTop: "3rem",
-            }}
-          >
-            User
-          </span>
-        </h1>
+        <h1 className="text-center mt-5">My Reviews</h1>
       </Box>
     </Box>
   );
 }
 
-Dashboard.propTypes = {
+Review.propTypes = {
   /**
    * Injected by the documentation to work in an iframe.
    * You won't need it on your project.
@@ -212,4 +182,4 @@ Dashboard.propTypes = {
   window: PropTypes.func,
 };
 
-export default Dashboard;
+export default Review;

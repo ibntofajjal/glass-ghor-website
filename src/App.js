@@ -2,6 +2,9 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import "./App.css";
 import AuthProvider from "./contexts/AuthProvider";
 import Dashboard from "./Pages/Dashboard/Dashboard/Dashboard";
+import MyOrder from "./Pages/Dashboard/MyOrder/MyOrder";
+import Pay from "./Pages/Dashboard/Pay/Pay";
+import Review from "./Pages/Dashboard/Review/Review";
 import Glasses from "./Pages/Glasses/Glasses/Glasses";
 import Home from "./Pages/Home/Home/Home";
 import NotFound from "./Pages/Home/NotFound/NotFound";
@@ -25,9 +28,21 @@ function App() {
             <Route path="/glasses">
               <Glasses></Glasses>
             </Route>
-            <Route path="/dashboard">
+            <PrivateRoute path="/dashboard">
               <Dashboard></Dashboard>
-            </Route>
+            </PrivateRoute>
+            <PrivateRoute path="/pay">
+              <Pay></Pay>
+            </PrivateRoute>
+            <PrivateRoute path="/myOrder">
+              <MyOrder></MyOrder>
+            </PrivateRoute>
+            <PrivateRoute path="/myOrder">
+              <MyOrder></MyOrder>
+            </PrivateRoute>
+            <PrivateRoute path="/review">
+              <Review></Review>
+            </PrivateRoute>
             <Route path="/login">
               <Login></Login>
             </Route>
