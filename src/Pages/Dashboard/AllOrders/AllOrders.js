@@ -19,13 +19,39 @@ import dashboardLogo from "../../../img/logo.png";
 import { Link, NavLink } from "react-router-dom";
 import paymentIMG from "../../../img/Banner-Background/payment.png";
 import useAuth from "../../../hooks/useAuth";
+import "./AllOrders.css";
 
 const drawerWidth = 240;
 
-function Pay(props) {
+function AllOrders(props) {
   const { logOut } = useAuth();
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
+
+  // All Orders API State
+  const [allOrders, setAllOrders] = React.useState([]);
+  React.useEffect(() => {
+    fetch(`https://salty-depths-67861.herokuapp.com/orders`)
+      .then((res) => res.json())
+      .then((data) => setAllOrders(data));
+  }, []);
+
+  // Delete Method implement
+  const handleDelete = (id) => {
+    const url = `https://salty-depths-67861.herokuapp.com/orders${id}`;
+    fetch(url, {
+      method: "DELETE",
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.deletedCount) {
+          alert(`deleted`);
+          const remaining = allOrders.filter((orders) => orders._id !== id);
+          setAllOrders(remaining);
+        }
+      });
+  };
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -46,7 +72,6 @@ function Pay(props) {
         ))} */}
 
         <li>
-          {" "}
           <NavLink
             to="/home"
             className="ps-3"
@@ -173,14 +198,61 @@ function Pay(props) {
           {drawer}
         </Drawer>
       </Box>
-      <Box component="main">
-        <img src={paymentIMG} className="img-fluid" alt="" />
+      <Box
+        component="main"
+        sx={{
+          flexGrow: 1,
+          p: 3,
+          width: { sm: `calc(100% - ${drawerWidth}px)` },
+        }}
+      >
+        <Toolbar />
+
+        <div className="container my-3">
+          <h2 className="text-center">All Orders</h2> <hr />
+          <div className="table-responsive">
+            <table className="table">
+              <tbody>
+                <br />
+                <tr>
+                  {allOrders.map((orders) => (
+                    <div key={orders._id} className="all-order-card">
+                      <td>
+                        <b>Glass Name : </b> {orders.name}
+                      </td>
+                      <li>
+                        <b>Order Date : </b> {orders.date}
+                      </li>
+                      <li>
+                        <b>Price : </b> {orders.price}
+                      </li>
+                      <li>
+                        <b>Address : </b> {orders.address}
+                      </li>
+                      <li>
+                        <b>Your Email : </b> {orders.email}
+                      </li>
+                      <button
+                        onClick={() => handleDelete(orders._id)}
+                        className="btn btn-warning"
+                      >
+                        Delete Order
+                      </button>
+                    </div>
+                  ))}
+                </tr>
+              </tbody>
+            </table>
+            <br />
+            <br />
+          </div>
+        </div>
       </Box>
     </Box>
   );
 }
 
-Pay.propTypes = {
+AllOrders.propTypes = {
   /**
    * Injected by the documentation to work in an iframe.
    * You won't need it on your project.
@@ -188,4 +260,4 @@ Pay.propTypes = {
   window: PropTypes.func,
 };
 
-export default Pay;
+export default AllOrders;

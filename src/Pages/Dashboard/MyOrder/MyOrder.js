@@ -84,6 +84,15 @@ function MyOrder(props) {
         </li>
         <li>
           <NavLink
+            to="/allOrders"
+            className="ps-3"
+            style={{ textDecoration: "none", fontSize: "20px" }}
+          >
+            All Orders
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
             to="/review"
             className="ps-3"
             style={{ textDecoration: "none", fontSize: "20px" }}

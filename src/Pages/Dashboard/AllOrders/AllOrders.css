@@ -1,0 +1,16 @@
+.all-order-card {
+  border: 2px solid lightgray;
+  padding: 50px !important;
+  border-radius: 10px;
+  margin: 20px auto;
+  /* background-color: rgb(55, 28, 87) !important; */
+  /* color: rgb(221, 221, 221); */
+}
+
+.all-order-card td {
+  background-color: brown;
+  /* width: 60%; */
+  padding: 10px 40px 10px 20px;
+  border-radius: 0 25px 25px 0;
+  color: white;
+}
