@@ -3,6 +3,7 @@ import Footer from "../../Shared/Footer/Footer";
 import Navbar from "../../Shared/Navbar/Navbar";
 import GlassModels from "../GlassModels/GlassModels";
 import Header from "../Header/Header";
+import Reviews from "../Reviews/Reviews";
 import Services from "../Services/Services/Services";
 
 const Home = () => {
@@ -14,8 +15,10 @@ const Home = () => {
       <Header></Header>
       {/* GlassesModel */}
       <GlassModels></GlassModels>
-      {/* GlassesModel */}
+      {/* Latest Glasses */}
       <Services></Services>
+      {/* Reviews */}
+      <Reviews></Reviews>
       {/* Footer */}
       <Footer></Footer>
     </div>

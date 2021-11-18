@@ -1,0 +1,28 @@
+.review-card {
+  background-color: rgb(99, 86, 199);
+  /* margin: 6px; */
+  color: white;
+  padding: 30px;
+  border-radius: 5px;
+}
+.review-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 7px;
+}
+
+/* Responsive */
+@media only screen and (max-width: 688px) {
+  .review-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 4px;
+  }
+  .review-card {
+    background-color: rgb(99, 86, 199);
+    margin: 6px;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+  }
+}

@@ -66,13 +66,14 @@ const Buy = () => {
 
   const {
     register,
-
+    reset,
     handleSubmit,
     formState: { errors },
   } = useForm();
 
   const onSubmit = (data) => {
     // console.log(data);
+    reset();
   };
 
   return (
@@ -100,6 +101,7 @@ const Buy = () => {
                 disabled
                 value={glass?.name}
                 //  {...register("name")}
+
                 name="productName"
               />
               <br />
@@ -108,6 +110,7 @@ const Buy = () => {
                 disabled
                 value={user?.email}
                 // {...register("email")}
+
                 name="email"
               />
               <br />
@@ -118,12 +121,14 @@ const Buy = () => {
                 name="creditNumber"
                 onBlur={handleOnBlur}
                 // {...register("creditNumber")}
+                {...register("exampleRequired", { required: true })}
               />
               <br />
               <input
                 type="date"
                 name="date"
                 onBlur={handleOnBlur}
+                {...register("exampleRequired", { required: true })}
                 // {...register("date")}
               />
               <br />
@@ -140,6 +145,7 @@ const Buy = () => {
                 onBlur={handleOnBlur}
                 // {...register("Address")}
                 name="address"
+                {...register("exampleRequired", { required: true })}
               />
               <br />
               <input
@@ -149,6 +155,7 @@ const Buy = () => {
                 onBlur={handleOnBlur}
                 // {...register("number")}
                 name="phone"
+                {...register("exampleRequired", { required: true })}
               />
               <br />
               {errors.exampleRequired && <span>This field is required</span>}

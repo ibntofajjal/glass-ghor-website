@@ -16,9 +16,11 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import dashboardLogo from "../../../img/logo.png";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import paymentIMG from "../../../img/Banner-Background/payment.png";
+import { useForm } from "react-hook-form";
 import useAuth from "../../../hooks/useAuth";
+import "./Review.css";
 
 const drawerWidth = 240;
 
@@ -26,6 +28,30 @@ function Review(props) {
   const { logOut } = useAuth();
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
+
+  // React Hook Form
+  const {
+    register,
+    handleSubmit,
+    // watch,
+    reset,
+    formState: { errors },
+  } = useForm();
+
+  const onSubmit = (data) => {
+    fetch(`https://salty-depths-67861.herokuapp.com/addReview`, {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(data),
+    })
+      .then((res) => res.json())
+      .then((result) => console.log(result));
+
+    console.log(data);
+    reset();
+  };
+
+  // console.log(watch("example"));
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -36,15 +62,6 @@ function Review(props) {
       <img src={dashboardLogo} className="img-fluid p-3" width="200px" alt="" />
       <Divider />
       <List>
-        {/* {["Home", "Starred", "Send email", "Drafts"].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>
-              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-            </ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))} */}
-
         <li>
           {" "}
           <NavLink
@@ -182,7 +199,30 @@ function Review(props) {
         }}
       >
         <Toolbar />
-        <h1 className="text-center mt-5">My Reviews</h1>
+        <h1 className="text-center mt-4">My Reviews</h1>
+        <hr></hr>
+        <form className="review-form" onSubmit={handleSubmit(onSubmit)}>
+          <input
+            placeholder="Review Title"
+            {...register("title", { required: true })}
+          />
+          <br />
+          <input
+            placeholder="Your Name"
+            {...register("name", { required: true })}
+          />
+          <br />
+          <textarea
+            cols="10"
+            rows="5"
+            placeholder="Your Review"
+            {...register("description", { required: true })}
+          />
+          <br />
+
+          {errors.exampleRequired && <span>This field is required</span>}
+          <input className="pb-5" type="submit" />
+        </form>
       </Box>
     </Box>
   );
