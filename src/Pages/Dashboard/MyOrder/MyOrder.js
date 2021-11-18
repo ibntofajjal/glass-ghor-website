@@ -189,9 +189,9 @@ function MyOrder(props) {
             <table className="table">
               <thead>
                 <tr>
-                  <th scope="col">Bike Name</th>
+                  <th scope="col">Glass Name</th>
                   <th scope="col">Delivery Date</th>
-                  <th scope="col">Status</th>
+
                   <th scope="col">Action</th>
                 </tr>
               </thead>
